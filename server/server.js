@@ -130,3 +130,7 @@ server.listen(PORT, () => {
 });
 
 module.exports = { app, server, io }; 
+
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok' });
+});
